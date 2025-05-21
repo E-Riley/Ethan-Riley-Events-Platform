@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const mockEvents = [
   {
@@ -24,6 +24,9 @@ export default function EventInfo() {
       <h2>{event.title}</h2>
       <p>Date:{event.date}</p>
       <p>Location: {event.location}</p>
+      <Link to={`/signup/${eventId}`} className="btn">
+        Sign Up
+      </Link>
     </div>
   );
 }
